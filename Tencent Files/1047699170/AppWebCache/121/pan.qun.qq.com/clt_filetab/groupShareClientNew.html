@@ -1,0 +1,185 @@
+<!doctype html> <html lang=zh-cn data-keydown=aria.quick> <head> <meta charset=utf-8> <meta http-equiv=Content-Type content="text/html; charset=utf-8"> <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"> <script>var startTime = new Date().getTime();
+window._startTime = new Date().getTime();
+window._timePoints = {};
+function savePoint(type) {
+  var et = new Date().getTime();
+  window._timePoints[type] = et - window._startTime;
+}
+
+var localVersion = '<!-- @echo CUR_ENV -->';
+
+var faillist = {
+  'qreport': 2389673,
+  'zepto': 2389675,
+  'css': 2389677,
+  'js': 2389679
+}
+
+var suclist = {
+  'qreport': 2389674,
+  'zepto': 2389676,
+  'css': 2389678,
+  'js': 2389680
+}
+
+var failLoadCDNMonitor = '2389998',
+  hasReported = false;
+
+function reportMonitor(url, type) {
+  var list = suclist;
+  if (type === 'fail') {
+    list = faillist;
+  }
+  var m;
+  if (url.indexOf('qreport') >= 0) {
+    m = list['qreport'];
+  } else if (url.indexOf('zepto') >= 0) {
+    m = list['zepto'];
+  } else if (url.indexOf('.js') >= 0) {
+    m = list['js'];
+  } else {
+    m = list['css'];
+  }
+
+  new Image().src = '//report.url.cn/cgi-bin/data_report_collection?type=1000000&monitor=["' + m + (!hasReported ? (',' + failLoadCDNMonitor + '"]') : '"]');
+  hasReported = true;
+}
+
+function __checkUrl(old) {
+  var oldurl = old[old.length - 1];
+  if (oldurl === 'qreport.js?_bid=2231' || oldurl === 'zepto.all.js') {
+    return '/clt_filetab/js/lib/' + oldurl;
+  } else {
+    var path = old[old.length - 2];
+    return '/clt_filetab/' + path + '/' + oldurl;
+  }
+}
+
+function __appendJS(newurl, oldurl) {
+  var js = document.createElement('script');
+  js.setAttribute('type', 'text/javascript');
+  js.setAttribute('src', newurl);
+  js.onload = function () {
+    reportMonitor(newurl, 'suc');
+    // if (oldurl === 'qreport.js?_bid=2231') {
+    //   QReport.tdw.setDefaultTable('dc00141');
+    // }
+  }
+  document.head.appendChild(js);
+}
+
+function __appendCss(newurl) {
+  var css = document.createElement('link');
+  css.setAttribute('rel', 'stylesheet');
+  css.setAttribute('type', 'text/css');
+  css.setAttribute('href', newurl);
+  css.onload = function () {
+    reportMonitor(newurl, 'suc');
+  }
+  document.head.appendChild(css);
+}
+
+function __getCookie(key) {
+  var filterXSS = function (e) {
+    if (!e) return e;
+    for (; e != unescape(e);) e = unescape(e);
+    for (var r = ["<", ">", "'", '"', "%3c", "%3e", "%27", "%22", "%253c", "%253e", "%2527", "%2522"], n = ["&#x3c;", "&#x3e;", "&#x27;", "&#x22;", "%26%23x3c%3B", "%26%23x3e%3B", "%26%23x27%3B", "%26%23x22%3B", "%2526%2523x3c%253B", "%2526%2523x3e%253B", "%2526%2523x27%253B", "%2526%2523x22%253B"], a = 0; a < r.length; a++) e = e.replace(new RegExp(r[a], "gi"), n[a]);
+    return e
+  };
+  var a;
+  return filterXSS((a = document.cookie.match(RegExp("(^|;\\s*)" + key + "=([^;]*)(;|$)"))) ? unescape(a[2]) : null)
+};
+
+function __getQQ() {
+  var uin = __getCookie('uin');
+  if (!uin) {
+    return 0;
+  }
+  uin += '';
+  return uin.replace(/^[\D0]+/g, '');
+}
+
+function __jsLoad(e) {
+  var src = e.src || e.href || '';
+  var old = src.split('/'),
+    newurl = __checkUrl(old);
+
+  reportMonitor(newurl, 'fail');
+
+  var msg = JSON.stringify({
+    '加载失败:': src
+  });
+
+  new Image().src = "//badjs2.qq.com/badjs?id=1033&uin=" + __getQQ() + "&from=" + encodeURIComponent(location.href) + "&ext={}&msg[0]=" + encodeURIComponent(msg) + "&level[0]=2&count=1&_t=" + new Date().getTime();
+  if (newurl.indexOf('css') >= 0) {
+    __appendCss(newurl);
+  } else {
+    __appendJS(newurl, old[old.length - 1]);
+  }
+}
+
+function __getParameter(name, str) {
+  str = str || location.href;
+  //var r = new RegExp("(\\?|#|&)" + name + "=([^&^#]*)(#|&|$)");
+  var r = new RegExp("(\\?|#|&)" + name + "=([^&^#]*)(&|#|$)"), m = str.match(r);
+  return decodeURIComponent(!m ? "" : m[2]);
+}
+</script> <script>var __firstData = false;
+var __isInit = false;
+var __rootId = '/';
+var __dataHadGet = false;
+function getData(query) {
+  var xhr = new XMLHttpRequest();
+  var _st = Date.now();
+  xhr.onreadystatechange = function() {
+    try {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var _et = Date.now();
+        if (_et - _st < 5000) {
+          var res = JSON.parse(xhr.responseText);
+          __firstData = res;
+        }
+      } else if (xhr.readyState == 4) {}
+    } catch (e) {
+      console.warn(e);
+    }
+  };
+  xhr.open('GET', '/cgi-bin/group_file/get_file_list?' + query, true);
+  xhr.withCredentials = true;
+  xhr.send();
+  __dataHadGet = true;
+}
+
+function __getToken() {
+  skey = __getCookie('skey');
+  var hash = 5381;
+  for (var i = 0, len = skey.length; i < len; ++i) {
+    hash += (hash << 5) + skey.charCodeAt(i);
+  }
+  var _token = hash & 0x7fffffff;
+  return _token;
+}
+
+function __init() {
+  var gc = __getParameter('gid');
+  var bkn = __getToken();
+  var webParams = __getParameter('webParams');
+  var query =
+    'gc=' + gc + '&bkn=' + bkn + '&start_index=0&cnt=30&filter_code=0';
+  if (webParams === '') {
+    query +=
+      '&folder_id=' + encodeURIComponent('/') + '&show_onlinedoc_folder=1';
+  } else {
+    try {
+      webParams = JSON.parse(webParams);
+      if (webParams.params.fid) {
+        __rootId = webParams.params.fid;
+        query += '&folder_id=' + encodeURIComponent(webParams.params.fid);
+      }
+    } catch (e) {}
+  }
+  getData(query);
+}
+
+__init();
+</script> <link rel=stylesheet type=text/css onload='savePoint("css")' onerror=__jsLoad(this) href=//s1.url.cn/qqun/pan/clt_filetab/css/groupShareClientNew-92eec1.css /> <script charset=utf-8>var ua=navigator.userAgent;"string"==typeof ua&&0<=ua.indexOf("Mac OS X")&&document.querySelector("html").classList.add("mac")</script> <title>群文件</title> </head> <body class=""> <div class=aria-hide id=ariaQuickTipsDom aria-describedby=ariaQuickTips tabindex=1></div> <div class=hide id=ariaQuickTips style=display:none> 新增快捷键 查看快捷键列表 ctrl+q 移动文件时选择下一个文件夹 alt+shift+右箭头 移动文件时选择上一个文件夹 alt+shift+左箭头 切换下一个文件 alt+shift+下箭头 切换上一个文件 alt+shift+上箭头 返回根目录 alt+shift+g 相关快捷键: 新建文件夹: alt+shift+n; 上传文件: alt+shift+u; 关闭所有浮层: alt+shift+x; 打开或关闭任务盒子: alt+shift+b 选中文件或文件夹的情况下: 打开文件夹: alt+shift+o; 查看文件夹属性: alt+shift+p; 重命名: alt+shift+r; 删除: alt+shift+d; 下载: alt+shift+l; 预览文件: alt+shift+y; 转发: alt+shift+f; 转发文件到手机: alt+shift+h; 移动文件: alt+shift+m; 举报: alt+shift+j </div> <div id=fileAreaDom style=display:none> <header> <div class=root-folder> 共<span id=fileNumText tabindex=1></span>个文件 (已使用<span id=groupSize>0M/2GB</span>) </div> <div class=sub-folder> <span class=root data-action=folder.open data-path=/ tabindex=3 aria-label=进入根目录>群文件</span> <span class=gt></span> <span class=sub-folder-name></span> </div> <div class=header-action> <div class=search-action data-hover=search:hover> <button class=search-btn aria-label=搜索文件 data-action=search title=搜索文件 tabindex=2></button> <input type=text id=inputSearch data-keyup=search data-focus=search.focus data-blur=search.blur maxlength=10 placeholder=搜索 title=搜索文件 aria-label=搜索 tabindex=2 /> </div> <div class=box-menu id=openBoxBtn data-action=box.toggle title=查看上传和下载任务 data-blur=aria.fmg tabindex=2></div> <div class=more-menu data-action=menu.showBatch role=botton aria-label=进入批量模式 tabindex=3 title=进入批量模式></div> <div class=menu-list data-action=menu.show role=botton aria-label=更多操作 tabindex=3 title=更多操作></div> <button class=upload-btn data-action=file.upload title=上传文件 aria-label=上传文件 tabindex=1>上传</button> </div> <div class=menu-panel id=moreMenu> <ul> <li role=button id=createNewFolder data-action=folder.create data-blur=aria.fmg tabindex=2 title=新建文件夹><i class=v3-newfolder data-action=""></i>新建文件夹</li> <li role=button aria-label=刷新 data-action=menu.refresh name=refresh tabindex=-1><i class=v3-refresh data-action=""></i>刷新</li> <li role=button aria-label=开通极速下载 data-action=vip.show tabindex=-1><i class=v3-fast></i>开通极速下载</li> </ul> </div> </header> <section class=list-thead> <div class=file-check></div> <div class=file-name data-resize-id=name> <div class=name-space data-action=file.sort data-type=name>文件<span></span></div> </div> <div class=file-update data-resize-id=update> <div class="file-tags tab-resize" data-resize-aim=update>&nbsp;</div> <div class=name-space data-action=file.sort data-type=time>更新时间<span></span></div> </div> <div class=file-size data-resize-id=size> <div class="file-tags tab-resize" data-resize-aim=size>&nbsp;</div> <div class=name-space data-action=file.sort data-type=size>大小<span></span></div> </div> <div class=file-upload data-resize-id=upload-user> <div class="file-tags tab-resize" data-resize-aim=upload-user>&nbsp;</div> <div class=name-space data-action=file.sort data-type=user>上传者<span></span></div> </div> <div class=file-down data-resize-id=download-times> <div class="file-tags tab-resize" data-resize-aim=download-times>&nbsp;</div> <div class=name-space data-action=file.sort data-type=download>下载次数<span></span></div> </div> <div class=file-action></div> <div class=file-source data-resize-id=source> <i class="tab-resize tab-split" data-resize-aim=source></i> 来源 </div> </section> <section class=scroll-dom> <section class=file-list id=fileListDom> </section> <ul id=fileMoreMenu data-type=""> </ul> </section> <footer class=batch-block> <div class=text-block>已选择<span id=selectFileNum></span>个文件</div> <div class=btn-block> <button id=batchDown class=disabled data-action=batch.downloadAction aria-label=下载选中文件 tabindex=2>下载</button> <button id=batchMove class=disabled data-action=file.batchMove aria-label=移动选中文件 data-blur=aria.fmg tabindex=2>移动</button> <button id=batchSaveAs class=disabled data-action=file.batchSaveAs aria-label=选中文件另存为 tabindex=2>另存为</button> <button id=batchDel class=disabled data-action=file.batchDelete aria-label=删除选中文件 data-blur=aria.fmg tabindex=2>删除</button> <button data-action=menu.closeBatch aria-label=退出批量模式 tabindex=2>取消</button> </div> </footer> </div> <div class="menu msg-box" id=box> <div class="box-title empty" id=boxTitle><a href=javascript:void(0) data-action=task.clearHistory title=清除历史操作 tabindex=-1>清除历史操作</a> <span class=mac-del data-action=task.clearHistory></span></div> <div class="box-list scroll empty" id=boxListDom> </div> </div> <div class="panel-overlay folder-name-panel" id=folderPanel> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <span>重命名</span> <div class=close data-action=folder.panelhide></div> </div> <div class=panel-body> <div class=panel-content> <div class=rename-hint>请输入文件新名称</div> <input id=newInputName type=text class=new-name data-focus=input.edit data-blur=input.blur data-keyup=input.keyup data-cstart=input.compositionstart data-cend=input.compositionend tabindex=2 /> <div class=error-message>文件名称中包含敏感词，请重新修改文件名</div> </div> </div> <div class=panel-footer> <input aria-label=取消 type=button value=取消 class="btn-no btn-common btn-right" data-action=folder.panelhide tabindex=2 /> <input aria-label=确定 type=submit value=确定 class="btn-ok btn-common btn-right" data-action=rename_ok tabindex=2 /> </div> </div> </div> <div class="panel-overlay folder-name-panel delete" id=batchPanel aria-describedby=batchDelText> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <span>批量删除</span> <div class=close data-action=panel.close></div> </div> <div class="panel-body batch-delete"> <div class=panel-icons><span class=icons-new-alert></span></div> <div class=panel-content id=batchDelText> </div> </div> <div class=panel-footer> <input aria-label=取消 type=button value=取消 class="btn-no btn-common btn-right" data-action=panel.close tabindex=2 /> <input aria-label=确定 type=submit value=确定 class="btn-ok btn-common btn-right" tabindex=2 /> </div> </div> </div> <div class="panel-overlay folder-name-panel delete" id=cleanFile aria-describedby=cleanFileText tabindex=-1> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <span>提示</span> <div class=close data-action=panel.close></div> </div> <div class="panel-body batch-delete"> <div class=panel-icons><span class=icons-fail-alert></span></div> <div class=panel-content id=cleanFileText> 将为你保留最近的1500个文件和文件夹，并删除之前的所有文件 <div class=warming>注意:本操作不可恢复，请自行备份</div> </div> </div> <div class=panel-footer> <input aria-label=取消 type=button value=取消 class="btn-no btn-common btn-right" data-action=panel.close tabindex=2 /> <input aria-label=确定 type=submit value=确定 class="btn-ok btn-common btn-right" tabindex=2 /> </div> </div> </div> <div class="panel-overlay folder-name-panel delete" id=cleanProg aria-describedby=cleanText> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <div class=close data-action=panel.close></div> </div> <div class="panel-body more-file-delete-prog"> <div class=panel-content id=cleanText> <div class=clean-prog>正在删除中</div> <div class=clean-info>视文件数量可能需要较长时间,请耐心等候</div> </div> </div> </div> </div> <div class="panel-overlay folder-name-panel" id=updateQQ aria-describedby=updateQQTips> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <span>提示</span> <div class=close data-action=panel.close></div> </div> <div class=panel-body> <div class=panel-content> <i class=icons-new-alert></i> <div class=tips-msg id=updateQQTips>当前版本仅支持将文件上传至群文件首页，升级至QQ最新版本可上传文件至文件夹内。</div> </div> </div> <div class=panel-footer> <input aria-label=不再提示 type=checkbox class=cbox data-action=upload.noTips tabindex=2 /> 不再提示 <input aria-label=暂不升级 type=button value=暂不升级 class="btn-no btn-common btn-right btn-notips" data-action=upload.cUpload tabindex=2 /> <a aria-label=升级到最新版本 href=http://im.qq.com/pcqq/ target=_blank tabindex=2 data-action=qq.update><input type=submit value=升级到最新版本 class="btn-ok btn-common btn-right"/></a> </div> </div> </div> <div class=panel-overlay id=folderPropertyPanel> </div> <div class="panel-overlay folder-name-panel" id=openVip> <div class=panel> <div class=panel-title> <i class=icons-qq></i> <span>开通极速下载</span> <div class=close data-action=panel.close></div> </div> <div class=panel-body> <div class=panel-content> <i class=icons-new-alert></i> <div class=tips-msg id=vipTipsDom>您还未开通QQ超级会员，开通后可以在PC和手机QQ中获得文件下载的极速体验。</div> </div> </div> <div class=panel-footer> <div class=panel-right-width> <input aria-label=立即开通 aria-describedby=vipTipsDom type=submit value=立即开通 data-action=vip.open class="btn-ok btn-common btn-right" tabindex=3 /> <input aria-label=取消 type=button value=取消 class="btn-no btn-common btn-right" data-action=panel.close tabindex=3 /> </div> </div> </div> </div> <div class="custom-menu hide" id=customMenu tabindex=-1> </div> <div id=newBie> <div class=tips id=newBieTips> <div class=top></div> <div class=close></div> <div class=info> <p><strong>双击</strong>可直接打开文件，</p> <p><strong>右键</strong>菜单可选择保存。</p> </div> </div> <div class=mask></div> </div> <div id=containerFolderTreePanel></div> <div class=alert-tips id=alertTips> <a href=http://kf.qq.com/faq/120511jiYzIJ140828eimiAR.html target=_blank data-action=tips.close>【网络正能量倡议书】腾讯呼吁网友共建绿色QQ群 抵制色情、反动等违法信息。</a> <div class=close data-action=tips.close></div> </div> <div id=onlineDoc> <iframe id=onlineDocFrame sandbox="allow-same-origin allow-scripts"></iframe> </div> <script id=nodeDataPoint></script> <script>setTimeout(function(){var e=function(e,o){o=o||location.href;var r=new RegExp("(\\?|#|&)"+e+"=([^&^#]*)(&|#|$)"),c=o.match(r);return decodeURIComponent(c?c[2]:"")}("jumpfrom"),o=document.querySelector("#onlineDocFrame");if("tips"===e){""===o.src&&(o.src="//docs.qq.com/scenario/group.html?gid="+G.info.gc+"&role="+G.info.role+"&_from=qpan");try{document.querySelector("#onlineDocsFolder .red-point").remove()}catch(e){}document.querySelector("#onlineDoc").classList.add("show")}else document.querySelector("#fileAreaDom").style.display="block"},0)</script> <script src=https://pub.idqqimg.com/pc/misc/sentry/raven.min.js crossorigin=anonymous></script> <script>window.Raven&&Raven.config("https://1fe6c7a4c6064e21a79a9bbeca9ca377@report.url.cn/sentry/250",{sampleRate:.1}).install()</script> <script onload='savePoint("zepto")' onerror=__jsLoad(this) charset=utf-8 src=//s.url.cn/pub/zepto/1.1.6/zepto.all.js></script> <script onload='savePoint("js")' onerror=__jsLoad(this) charset=utf-8 src=//s1.url.cn/qqun/pan/clt_filetab/js/groupShareClientNew-d309f3.js></script> </body> </html>

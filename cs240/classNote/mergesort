@@ -1,0 +1,15 @@
+mergesort(array a){
+    if a->size ==1 return a;
+    left = a[0->n/2];
+    right = a[n/2+1->n];
+    new_left = mergesort(left);
+    new_right = mergesort(right);
+    sorted = merge(new_left, new_right)
+    return sorted;
+}
+
+merge(left, right){
+    new sorted_array[left-＞ｓｉｚｅ+right->size]
+    i, j, k = 0;
+    while()
+}

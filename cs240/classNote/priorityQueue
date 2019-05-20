@@ -1,0 +1,20 @@
+Priority Queue:
+    Priority values
+    Constant time
+    Heap:
+        -Priority value alway at the root
+        -Parent has higher priority than children
+        -complete 
+    Heapify start with (arraysize()-2/2)
+
+
+
+class Heap{
+    private:
+    std::vector<int>heap;
+
+    unsign int left(unsigned int parent)
+    {
+
+    }
+}

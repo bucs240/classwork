@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AvatarStrFaceMap>
+<StrFace>
+<!--以下为表情随动用-->
+<Face str="撇嘴" id="1" />
+<Face str="切" id="1" />
+<Face str="色色" id="2" />
+<Face str="太美了" id="2" />
+<Face str="好美" id="2" />
+<Face str="口水" id="2" />
+<Face str="发呆" id="3" />
+<Face str="傻了" id="3" />
+<Face str="得意" id="4" />
+<Face str="好酷" id="4" />
+<Face str="帅呆" id="4" />
+<Face str="牛逼" id="4" />
+<Face str="流泪" id="5" />
+<Face str="伤心" id="5" />
+<Face str="桑心" id="5" />
+<Face str="闭嘴" id="7" />
+<Face str="不说了" id="7" />
+<Face str="说错话了" id="7" />
+<Face str="哭了" id="9" />
+<Face str="哭哭" id="9" />
+<Face str="大哭" id="9" />
+<Face str="哭死" id="9" />
+<Face str="尴尬" id="10" />
+<Face str="冷汗" id="10" />
+<Face str="汗死" id="10" />
+<Face str="生气" id="11" />
+<Face str="发怒" id="11" />
+<Face str="气死了" id="11" />
+<Face str="不理你了" id="11" />
+<Face str="调皮" id="12" />
+<Face str="无聊" id="12" />
+<Face str="^_-" id="12" />
+<Face str="捣蛋" id="12" />
+<Face str="古灵精怪" id="12" />
+<Face str="淘气" id="12" />
+<Face str="呲牙" id="13" />
+<Face str="哈哈" id="13" />
+<Face str="^_^" id="13" />
+<Face str="呵呵" id="13" />
+<Face str="呵：）" id="13" />
+<Face str="难过" id="50" />
+<Face str="伤了" id="50" />
+<Face str="很伤" id="50" />
+<Face str="想吐" id="54" />
+<Face str="要吐" id="54" />
+<Face str="吐了" id="54" />
+<Face str="惊恐" id="55" />
+<Face str="惊吓" id="55" />
+<Face str="害怕" id="55" />
+<Face str="怕怕" id="55" />
+<Face str="惊呆啦" id="55" />
+<Face str="吓死了" id="55" />
+<Face str="好吓人" id="55" />
+<Face str="流汗" id="56" />
+<Face str="真汗" id="56" />
+<Face str="好汗" id="56" />
+<Face str="- -!" id="56" />
+<Face str="郁闷" id="56" />
+<Face str="无语" id="56" />
+<Face str="好紧张" id="56" />
+<Face str="偷笑" id="73" />
+<Face str="嘻嘻" id="73" />
+<Face str=";)" id="73" />
+<Face str="暗喜" id="73" />
+<Face str="窃喜" id="73" />
+<Face str="可爱" id="74" />
+<Face str="好Q" id="74" />
+<Face str="好萌" id="74" />
+<Face str="卡哇伊" id="74" />
+<Face str="鄙视" id="75" />
+<Face str="飘过" id="75" />
+<Face str="傲慢" id="76" />
+<Face str="随便" id="76" />
+<Face str="弱爆" id="76" />
+<Face str="好饿" id="77" />
+<Face str="饿了" id="77" />
+<Face str="有吃的么" id="77" />
+<Face str="打盹" id="78" />
+<Face str="困了" id="78" />
+<Face str="呼呼" id="78" />
+<Face str="睡了" id="78" />
+<Face str="好困" id="78" />
+<Face str="打个盹" id="78" />
+<Face str="顶" id="79" />
+<Face str="好棒" id="79" />
+<Face str="yeah" id="79" />
+<Face str="去死吧" id="80" />
+<Face str="去你的" id="80" />
+<Face str="白痴" id="80" />
+<Face str="尼玛" id="80" />
+<Face str="抓狂" id="84" />
+<Face str="烦死了" id="84" />
+<Face str="恼火" id="84" />
+<Face str="头晕" id="83" />
+<Face str="好晕" id="83" />
+<Face str="晕了" id="83" />
+<Face str="可怜" id="111" />
+<Face str="亲一个" id="109" />
+<Face str="啵一个" id="109" />
+<Face str="飞吻" id="109" />
+<Face str="思考" id="801" />
+<Face str="让我想想" id="801" />
+<Face str="想一下" id="801" />
+<Face str="考虑一下" id="801" />
+<!--以下为应用接入结构化消息推送用-->
+<Face str="敢比比智商么？！看右边" id="999" />
+<!--以下为咒语用-->
+<Face str="你这个猪头" id="1001" pgv="client.app.incantation.wordcount.nizhegezhutou"/> 
+<Face str="猪头猪头" id="1001" /> 
+<Face str="你這個豬頭" id="1001" /> 
+<Face str="豬頭豬頭" id="1001" /> 
+<Face str="你就是坨屎" id="1002" pgv="client.app.incantation.wordcount.nijiushituoshi"/> 
+<Face str="一坨屎" id="1002" /> 
+<Face str="你好丑啊" id="1003" pgv="client.app.incantation.wordcount.nihaochoua"/> 
+<Face str="丑啊丑啊" id="1003" /> 
+<Face str="你好醜啊" id="1003" /> 
+<Face str="醜啊醜啊" id="1003" /> 
+<Face str="雷公助我" id="1004" pgv="client.app.incantation.wordcount.leigongzhuwo"/> 
+<Face str="雷电雷电" id="1004" /> 
+<Face str="雷電雷電" id="1004" />
+<Face str="你是好人" id="1005" pgv="client.app.incantation.wordcount.nishihaoren"/>
+<Face str="雷锋雷锋" id="1005" />
+<Face str="雷鋒雷鋒" id="1005" />
+<Face str="亲亲" id="1006" pgv="client.app.incantation.wordcount.qinqin"/>
+<Face str="么么" id="1006" />
+<Face str="親親" id="1006" />
+<Face str="麼麼" id="1006" />
+<Face str="中秋快乐" id="1007" /> 
+<Face str="中秋快樂" id="1007" />
+<Face str="嫦娥送祝福" id="1008" />
+<Face str="玉兔贺中秋" id="1009" /> 
+<Face str="玉兔賀中秋" id="1009" />
+<Face str="给爷跳个舞" id="1010" />
+<Face str="給爺跳個舞" id="1010" />
+<Face str="江南style" id="1010" />
+<Face str="江南Style" id="1010" />
+<Face str="你幸福吗" id="1011" />
+<Face str="你幸福嗎" id="1011" />
+<Face str="你满足吗" id="1012" />
+<Face str="你滿足嗎" id="1012" />
+<Face str="别潜水" id="1013" />
+<Face str="別潛水" id="1013" />
+<Face str="万圣节快乐" id="1014" />
+<Face str="萬聖節快樂" id="1014" />
+<Face str="幽灵现身" id="1015" />
+<Face str="幽靈現身" id="1015" />
+<Face str="灵猫现身" id="1016" />
+<Face str="靈貓現身" id="1016" />
+<Face str="光棍" id="1017" />
+<Face str="感谢有你" id="1018" />
+<Face str="感謝有你" id="1018" />
+<Face str="感恩节快乐" id="1019" />
+<Face str="感恩節快樂" id="1019" />
+<Face str="加油" id="1020" />
+<Face str="走你" id="1021" />
+<Face str="起飞" id="1021" />
+<Face str="起飛" id="1021" />
+<Face str="圣诞快乐" id="1022" />
+<Face str="聖誕快樂" id="1022" />
+<Face str="快乐送礼" id="1023" />
+<Face str="快樂送禮" id="1023" />
+<Face str="麋鹿麋鹿" id="1024" />
+<Face str="你好色" id="1025" />
+<Face str="色狼来了" id="1025" />
+<Face str="色狼來了" id="1025" />
+<Face str="求船票" id="1026" />
+<Face str="送你船票" id="1026" />
+<Face str="笨蛋" id="1027" />
+<Face str="歪脖子" id="1028" />
+<Face str="财神到" id="1028" />
+<Face str="財神到" id="1028" />
+<Face str="过年" id="1029" />
+<Face str="過年" id="1029" />
+<Face str="新年好" id="1030" />
+<Face str="恭喜发财" id="1031" />
+<Face str="恭喜發財" id="1031" />
+<Face str="红包拿来" id="1031" />
+<Face str="紅包拿來" id="1031" />
+<Face str="放鞭炮" id="1033" />
+<Face str="永远爱你" id="1034" />
+<Face str="永遠愛你" id="1034" />
+<Face str="女皇大人" id="1035" />
+<Face str="整蛊你" id="1036" />
+<Face str="整蠱你" id="1036" />
+<Face str="哦耶" id="1038" />
+<Face str="绿计划" id="1039" />
+<Face str="支持环保" id="1039" />
+<Face str="綠計畫" id="1039" />
+<Face str="支持環保" id="1039" />
+<Face str="暗夜英雄" id="1040" />
+<Face str="劳动最光荣" id="1041" />
+<Face str="勞動最光榮" id="1041" />
+<Face str="最强音" id="1042" />
+<Face str="酸酸乳" id="1042" />
+<Face str="最強音" id="1042" />
+<Face str="祈福雅安" id="1043" />
+<Face str="K歌" id="1044" />
+<Face str="k歌" id="1044" />
+<Face str="有才" id="1045" />
+<Face str="好喝" id="1046" />
+<Face str="爱玩" id="1047" />
+<Face str="愛玩" id="1047" />
+<Face str="舒畅" id="1048" />
+<Face str="滋润" id="1048" />
+<Face str="舒暢" id="1048" />
+<Face str="滋潤" id="1048" />
+<Face str="儿童节快乐" id="1049" />
+<Face str="兒童節快樂" id="1049" />
+<Face str="正能量" id="1050" />
+<Face str="打你" id="1051" />
+<Face str="考完了" id="1052" />
+<Face str="中国足球" id="1053" />
+<Face str="中國足球" id="1053" />
+<Face str="躺枪" id="1055" />
+<Face str="躺槍" id="1055" />
+<Face str="遨游太空" id="1056" />
+<Face str="龙门" id="1057" pgv="client.app.incantation.wordcount.dianshiju" probability="40"/>
+<Face str="电视剧" id="1057" />
+<Face str="龍門" id="1057" />
+<Face str="電視劇" id="1057" />
+<Face str="人品爆发" id="1058" />
+<Face str="人品爆發" id="1058" />
+<Face str="长发" id="1059" pgv="client.app.incantation.wordcount.longhair" />
+<Face str="長髮" id="1059" />
+<Face str="七夕" id="1060" />
+<Face str="牛郎织女" id="1061" />
+<Face str="牛郎織女" id="1061" />
+<Face str="好困啊" id="1062" pgv="client.app.incantation.wordcount.sosleep"/>
+<Face str="惊呆了" id="1063" />
+<Face str="驚呆了" id="1063" />
+<Face str="小伙伴" id="1063" />
+<Face str="小夥伴" id="1063" />
+<Face str="封神" id="1064" />
+<Face str="by2" id="1064" />
+<Face str="BY2" id="1064" />
+<Face str="吃货" id="1065" />
+<Face str="吃貨" id="1065" />
+<Face str="好累啊" id="1066" pgv="client.app.incantation.wordcount.sotired"/>
+<Face str="江湖" id="1067" pgv="client.app.incantation.wordcount.jianghu"/>
+<Face str="轩辕" id="1068" />
+<Face str="传奇" id="1068" />
+<Face str="做朋友吧" id="1069" />
+<Face str="牛奶" id="1070" isAD="1"/>
+<Face str="活力" id="1070" />
+<Face str="游戏" id="1071" probability="30"/>
+<Face str="遊戲" id="1071" />
+<Face str="高富帅" id="1071" />
+<Face str="草泥马" id="1072" />
+<Face str="草泥馬" id="1072" />
+<Face str="好玩" id="1073" probability="11"/>
+<Face str="道具" id="1073" />
+<Face str="年货" id="1074" isAD="1" />
+<Face str="甜蜜" id="1075" isAD="1" />
+<Face str="好吃的" id="1076" isAD="1" />
+<Face str="恭喜发财" id="1077" isAD="1" pgv="client.app.incantation.wordcount.gongxifacai"/>
+<!--以下为外网词汇触发次数统计用，请从11183开始-->
+<!--Face str="团圆" id="11182" pgv="client.app.incantation.wordcount.tuanyuan"/-->
+</StrFace>
+<emoFace randomid="902" startPro="0" randomTime="300000" randomPro="50"/>
+<allpurpose time="1384828294|1384828294|1384828294" bgurl="http://imgcache.qq.com/qqshow/images/v4/ad/allpurposeshow/140212_bg.jpg"/>
+<activity actid="2009" global_flag1="1" type_flag2="0" />
+<multitabs tabid="9001" red_only="0" num_only="0-99"/>
+<pushshow ids="1,2,3,4" 
+cp1="1" sf1="0" tjp1="ADTAG=client.freegift.link" tj1="540" t1="这件精美套装很适合你哦，快试试看" f1="683038" m1="682914" ug1="0|0|2|0|0|0" gt1="更多免费"
+cp2="1" sf2="0" tjp2="ADTAG=client.freegift.link" tj2="540" t2="这件精美套装很适合你哦，快试试看" f2="683038" m2="682914" ug2="2|0|-2|0|0|2" gt2="更多免费"
+cp3="1" sf3="0" tjp3="ADTAG=client.freegift.link" tj3="536" t3="这件精美套装很适合你哦，快试试看！" f3="683038|683034|683029|683917|683914|683894|632089|599971|587200|455181" m3="682914|682912|682909|683877|683872|683870|659130|659069|659049|659040" ug3="2|0|-2|0|2|0" gt3="更多精品QQ秀"
+cp4="1" sf4="0" tjp4="ADTAG=client.freegift.link" tj4="540" t4="这件精美套装很适合你哦，快试试看" f4="683038|683034|683029|683917|683914|683894|632089|599971|587200|455181" m4="682914|682912|682909|683877|683872|683870|659130|659069|659049|659040" ug4="2|0|-2|2|0|0" gt4="更多免费"/>
+<expression 
+	male="M0|M1|M2|M3|M4|M5|M6|M7|M8|M9|M10|M11|M12|M13|M14|M15|M16|M17|M18|M19|M20|M21|M22|M23|M24|M25|M26|M27|M28|M29|M30|M31|M32|M33|M34|M35|M36|M37|M38|M39" 
+	female="F0|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|F13|F14|F15|F16|F17|F18|F19|F20|F21|F22|F23|F24|F25|F26|F27|F28|F29|F30|F31|F32|F33|F34|F35|F36|F37|F38|F39"
+	baseurl="http://imgcache.qq.com/qqshow_v3/htdocs/live/qqexpression" motionswf="motion20140305"/>
+<funcItem>
+     <item lyr="21001" flyr="21001" typ="global">
+		<file t="2" typ="swf" url="0" id="1000000" ts="1418289636" x="0.00" y="0.00" rot="0" scale="100"/>
+	 </item>
+     <item lyr="21000" flyr="21000" typ="global">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1418289636" x="0.00" y="0.00" rot="0" scale="100" moreHost="2014-11-26_2014-12-1"/>
+    </item>
+    <item lyr="21002" flyr="21002" typ="global">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1535433031" x="0.00" y="0.00" rot="0" scale="100" startTime="2015-2-2" endTime="2030-6-30" keyWord="supervip" jumpID="776" srcItemID="1000023" srcItemLayer="21002" adtag="VIPSY" pageStr=""/>
+    </item>
+    <item lyr="23000" flyr="23000" typ="user">        
+        <file t="2" typ="swf" url="0" id="1000000" ts="1408955600" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item>
+    <item lyr="23001" flyr="23001" typ="user">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1397544363" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item>
+    <item lyr="22000" flyr="22000" typ="interact">        
+        <file t="2" typ="swf" url="0" id="1000000" ts="1401413608" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item>
+    <item lyr="22002" flyr="22002" typ="interact">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1404370788" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item>
+    <item lyr="22003" flyr="22003" typ="interact">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1401413608" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item> 
+    <item lyr="22005" flyr="22005" typ="interact">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1416998772" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item> 
+    <item lyr="22006" flyr="22006" typ="interact">
+        <file t="2" typ="swf" url="0" id="1000000" ts="1420420176" x="0.00" y="0.00" rot="0" scale="100"/>
+    </item> 
+</funcItem>
+</AvatarStrFaceMap>

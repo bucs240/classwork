@@ -1,0 +1,24 @@
+ris alwasy pointing to the next instruction 
+
+addem: instruction writing for instruction fecthing
+    addem's preamble
+                    pushq %rbp
+                    movq %rsp, %rbp
+                    addem stack fram contain pointer to main function
+    the red zone:
+        128 bytes (16 addresses) below %rsp (below stack)
+        The operating system would not mess the red zone
+        return main change $rbp to the top of main stack fram 
+        always below rsp
+
+    Redundancy:  
+        gcc parameter “-fomit-frame-pointer” removes use of %rbp, but
+        then all references are relative to %rsp, which can change, so the
+        code works, but becomes confusing
+
+    
+
+
+
+
+    

@@ -1,0 +1,26 @@
+Dictionary 
+Key -> value
+Key must by unique !!!!
+Secondary data structure.
+
+Tranditionary keys in sorted order but ends up every time adding needs sorted. Look up time Log(n)
+
+Probleams is    
+    U: universal keys
+    K sets of keys
+    What if U is large when K is small
+    
+Array
+    direct access table
+    let A to size K 
+
+Hash table
+    Hash function (Not true hash implementing on any languages) Has to know the data sets before writing a hash function
+    A[f(K)] = value 
+
+    principle of unicorm hashing 
+    Key % size  (mod hash)
+    |key|^2 = and take the center value(sqare median,better than mod hash but require power of 10 size of set keys) 
+
+    Imposiable to avoid collision
+    miniment collision 

@@ -1,0 +1,30 @@
+Should not the size of the data set before use the hash table, all hash methods has trade off
+
+Collision
+-Chaining  
+    Balance
+    Memory usages(2n)(wrost case)
+    T(n)(wrost case)
+    
+Resize:
+size 1.5 new-size < size 2(prime number) limite the Collision to minimen
+extrem memory usages
+but maintain constant acess time, only method
+
+Double Hashing ------> best to avoid collision,better lookup, but retrives are slow, if there is not going to have plantly of collisions, dont use it.
+Secondary hashing fucntion, prime - (k%prime) : prime depends on the range of 1.5(data size)~ 2(data size); 
+If collission still exist:
+    i = 0;
+    h(k)+i+h2(k)%size; add to hashing fucntion result, increase I to give different location
+    save memory but sacrafies insert and lookup time.
+
+
+Open addressing:
+    linear probing/quadrating probing,wrost case o(n) lookup time.
+    It's good to not that not going to have a lot of collission
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+node has 
+    max: t children
+    min: t/2
+
+Keys are sorted 
+keys = t-1
+
+Keys are always inserted at leaves
+
+Two ways to inserted:
+    Reative : require at least 3 traversal 
+    Proative  using 1 traversal 
+    Promoting the middle value up and create room to add 15
+
+    most log(N) operation when adding the tree
+B+ tree
+Value only inserted in leaves

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<flash_show_info>
+ <user uin="1047699170" ts="1415437956" />
+ <client burl="./flashshow2" tmo="150" trans="on" turl="http://jump.qq.com/clienturl_254" />
+ <scene scale="0" x="0.00" y="0.00" rot="0" style="16" sex="0" />
+ <message hasNewMsg="true">
+  <number>11</number>
+  <showreason>0</showreason>
+ </message>
+ <item lyr="1100" flyr="1100" typ="ownermsg">
+  <file t="2" typ="swf" url="18" id="5000018" ts="1378107854" x="0.00" y="40.00" rot="0" scale="100" rev="0" />
+ </item>
+ <activity actid="2009" user_flag1="0" system_flag2="1" extra_int="0" vars="1327075052|0|861811200|0|0" />
+ <item lyr="1450" flyr="1450" typ="birthdaytip">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1333596722" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="9000" flyr="9000" typ="tabs">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1402396112" x="-300.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="9001" flyr="9001" typ="tabs">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1376992528" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="1210" flyr="1210" typ="activescore">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1319095367" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0" />
+ </item>
+ <item lyr="1400" flyr="1400" typ="presentshow">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1393471656" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+  <feature id="1003" priority="110" showInfo="V1#F_0_0_0_100_0_0.00_0.00#66567_51_0_0_0_0_0_0_0_51_0.00_0.00_0_0_0_0_100_0_|66567_402_0_0_0_0_0_0_0_402_0.00_0.00_0_0_0_0_100_0_|66567_406_0_0_0_0_0_0_0_406_0.00_0.00_0_0_0_0_100_0_|66567_436_0_0_0_0_0_0_0_436_0.00_0.00_0_0_0_0_100_0_|66567_445_0_0_0_0_0_0_0_445_0.00_0.00_0_0_0_0_100_0_|66567_451_0_0_0_0_0_0_0_451_0.00_0.00_0_0_0_0_100_0_|66567_457_0_0_0_0_0_0_0_457_0.00_0.00_0_0_0_0_100_0_|66567_461_0_0_0_0_0_0_0_461_0.00_0.00_0_0_0_0_100_0_|66567_473_0_0_0_0_0_0_0_473_0.00_0.00_0_0_0_0_100_0_|66567_476_0_0_0_0_0_0_0_476_0.00_0.00_0_0_0_0_100_0_|66567_477_0_0_0_0_0_0_0_477_0.00_0.00_0_0_0_0_100_0_|66567_480_0_0_0_0_0_0_0_480_0.00_0.00_0_0_0_0_100_0_|66567_482_0_0_0_0_0_0_0_482_0.00_0.00_0_0_0_0_100_0_|66567_483_0_0_0_0_0_0_0_483_0.00_0.00_0_0_0_0_100_0_|66567_485_0_0_0_0_0_0_0_485_0.00_0.00_0_0_0_0_100_0_|66567_488_0_0_0_0_0_0_0_488_0.00_0.00_0_0_0_0_100_0_#" showTyp="1" normalTxt="&lt;font&gt;你有多种途径恢复心爱的形象。&lt;/font&gt;" normalJump="250" normalJumpParams="ADTAG=client.aio.expire.normal1" btnTxt="恢复形象" btnJump="250" btnJumpParams="ADTAG=client.aio.expire.normal2" closePeriod="1" successTxt="" userGroup="1|0" />
+ </item>
+ <item lyr="1200" flyr="1200" typ="btnsbar">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1351654243" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="1387027684|1|26|0|0|0|7|4|7|1378891511|0" />
+ </item>
+ <item lyr="2000" flyr="2000" typ="gdt">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1343983021" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0" />
+ </item>
+ <item lyr="1222" flyr="1222" typ="rdlevel">
+  <file t="2" typ="swf" url="19" id="5000019" ts="1382409278" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0|0||0|0|0|0|" />
+ </item>
+ <item lyr="11100" flyr="11100" typ="ownermsg" ver="1">
+  <file t="2" typ="swf" url="18" id="5000018" ts="1356429322" x="0.00" y="40.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="11450" flyr="11450" typ="birthdaytip" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1347363470" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="19000" flyr="19000" typ="tabs" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1347243465" x="-300.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="11210" flyr="11210" typ="activescore" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1347363469" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0" />
+ </item>
+ <item lyr="11400" flyr="11400" typ="presentshow" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1347243465" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="11200" flyr="11200" typ="btnsbar" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1402396112" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="1387027684|1|26|0|0|0|7|4|7|1378891511|0" />
+ </item>
+ <item lyr="12000" flyr="12000" typ="gdt" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1388129188" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0" />
+ </item>
+ <item lyr="11222" flyr="11222" typ="rdlevel" ver="1">
+  <file t="2" typ="swf" url="19" id="5000019" ts="1402396112" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0|0||0|0|0|0|" />
+ </item>
+ <item lyr="11080" flyr="11080" typ="qqshow" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1402396112" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="11081" flyr="11081" typ="qqshow" ver="1" down="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1402396112" x="0.00" y="0.00" rot="0" scale="100" rev="0" />
+ </item>
+ <item lyr="11082" flyr="11082" typ="qqshow" ver="1">
+  <file t="2" typ="swf" url="0" id="1000000" ts="1384244933" x="0.00" y="0.00" rot="0" scale="100" rev="0" vars="0" />
+ </item>
+</flash_show_info>

@@ -1,0 +1,14 @@
+Memory Storage:
+    Tree offer best performance for quick look up
+    Trie will not work since morden systems are 64bits, which means 64 quick look up every sigle time
+
+    Tree:
+        -Balanceced
+        store m - 1 value
+        m children
+    
+        4 ways Btree
+        M-way Btree
+        
+        always insert at the leaf
+        

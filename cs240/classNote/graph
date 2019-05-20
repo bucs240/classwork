@@ -1,0 +1,39 @@
+Search Graph:
+	Frontiers:
+		White unvisited
+		Grey frontier
+		Red full visted 
+	
+	BFS: queue
+		Check flags befreo,frontiers node push into queue
+		everytime finished look ahead on every vertexs
+		remove the vertexcs from the queue and grab the next item in the queue
+
+
+
+
+Start from A:
+
+
+BFS 
+	Shortest path unweighted graph
+	Uses queue
+	Wide graph is not applicable,require a lot of memory
+
+Depth First Search
+	Check all possible path
+	used in wide graph
+	Does not gaurentee shortest path in 
+
+Buliding a graph:
+	Unvisted 
+	Frontier: Geen
+	Fully visited : Red
+
+
+	BFS: 
+		Use stack 
+
+Shortest path:
+	Figue out all the path in the graph
+	initial a list and leg
